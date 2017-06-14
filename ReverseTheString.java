@@ -1,14 +1,18 @@
+//package com.weightwatchers.test;
+
 public class ReverseTheString
 {
     static void reverseEverything(String s)
     {
-        String[] words = s.split(" ");
+        //when you get the input, split it up
+    	String[] words = s.split(" ");
          
         String reverseTheString = "";
          
         for (int i = 0; i < words.length; i++) 
         {
-            String word = words[i];
+            //start doing the work of taking each word and then reversing it
+        	String word = words[i];
              
             String reverseTheWord = "";
              
@@ -17,13 +21,14 @@ public class ReverseTheString
                 reverseTheWord = reverseTheWord + word.charAt(j);
             }
              
+            //finish it up
             reverseTheString = reverseTheString + reverseTheWord + " ";
         }
-        
-        System.out.println("This is the original string");
+        //then display the output via println statements
+        System.out.println("This is the original string:");
         System.out.println(s);
         System.out.println("===========================================");
-        System.out.println("Here is the output in reverse");
+        System.out.println("Here is the output in reverse:");
         System.out.println(reverseTheString);
         System.out.println("");
     }
@@ -31,7 +36,7 @@ public class ReverseTheString
     public static void main(String[] args) 
     {
         reverseEverything("hope you are doing well");
-        reverseEverything("how does this string look when reversed?");
+        reverseEverything("how does this string look when reversed");
         reverseEverything("reversing another one");
         System.out.println("Should be done after this one");
     }
