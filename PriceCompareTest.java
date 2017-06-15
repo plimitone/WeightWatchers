@@ -149,22 +149,6 @@ public class PriceCompareTest {
 		} catch (Throwable e) {
 			System.out.println("Couldn't find the current stock price");
 		}
-		
-		
-		//add a failing test here to verify that the checks are working
-		//check for the lifestyle video tab
-		/*
-		try {
-			assertEquals("Video", driver.findElement(By.name("Video")).getAttribute("name"));
-			log.write("Found the lifestyle video tab on the home screen", "test", true);
-			log.takeSnapshot(driver);// This is a screenshot of the application
-			} catch (Throwable e){
-				log.write("Video tab could not be found on the home screen, failure test passes", "test", false);
-				log.takeSnapshot(driver);// This is a screenshot of the application
-			   	verificationErrors.append(WebMDObjMap.BuildNumber + " PERF " + "Video tab could not be found on the home screen, failure test passes");
-			    verificationErrors.append(Return);
-			}
-		*/
 	}
 	
 	public void tearDown() throws Throwable {
