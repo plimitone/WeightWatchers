@@ -61,7 +61,7 @@ public class PriceCompareTest {
 		//System.out.println("start");
 		}
 
-	@Test //This test verifies that drugs and medications articles are properly displayed with the proper headings
+	@Test //This tests the MotleyFool site as per Excercise #1
 	public void SafHome() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
@@ -123,8 +123,12 @@ public class PriceCompareTest {
 		
 		//then enter search text into the search field (ie: Aapl)
 		try {
-			driver.findElement(By.className("ticker-input-input")).sendKeys("Aapl");
-			System.out.println("Entered search text");
+			driver.findElement(By.className("ticker-input-input")).sendKeys("AA");
+			System.out.println("Entered search text (First Part");
+			//wait a bit and enter the second part of the search string
+			Thread.sleep(5000);
+			//enter the second part of the search string
+			driver.findElement(By.className("ticker-input-input")).sendKeys("PL");
 		} catch (Throwable e) {
 			System.out.println("Could not enter search text");
 		}
@@ -136,24 +140,113 @@ public class PriceCompareTest {
 		try {
 			//Select Apple from the list of results
 			driver.findElement(By.className("ticker-input-results-symbol")).click();
+			//driver.findElement(By.name("AAPL")).click();
 			System.out.println("Clicked Apple from the list of results");
 		} catch (Throwable e) {
 			System.out.println("Could not click Apple from the list of results");
 		}
 		
-		//on the details screen, find the current price of the stock, and display it via println
+		
+		//find the price quote container, to verify it's there
 		try {
-			driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section/section/section[2]/aside/h2[2]"));
+			assertEquals("price-quote-container", driver.findElement(By.className("price-quote-container")).getAttribute("price-quote-container"));
+			System.out.println("Found the price quote container");
+		} catch (Throwable e) {
+			System.out.println("Could not find the price quote container");
+		}
+		
+		
+		
+		//on the details screen, find the current price of the stock, and display it via println statement
+		try {
+			//driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/section/section/section[2]/aside/h2[2]"));
+			driver.findElement(By.className("current-price"));
 			System.out.println("Found the current price of the stock");
 			System.out.println("Current Price of the stock is " + driver.findElement(By.className("current-price")));
 		} catch (Throwable e) {
 			System.out.println("Couldn't find the current stock price");
 		}
+		
+		//First find the data table for the stock info
+		try {
+			driver.findElement(By.className("key-data-points data-table key-data-table1"));
+			System.out.println("Found the data table");
+		} catch (Throwable e) {
+			System.out.println("Couldn't find the data table");
+		}
+		
+		
+		//Print the 52wk high for the stock
+		//traverse through the table
+		//find the 52 week range entry
+		//then print the 52 week entry
+		
+		//Compare current price to high-low in range and display it via println statement
+		//get the current price and make it a int ("int aaplCurrPrice")
+		//Note there is no low price
+		
+		
+		//get the EPS for apple stock and save it
+		//traverse through the table
+		//find the EPS entry
+		//print the EPS entry
+		//get the EPS entry and make it a int ("int aaplEPS")
+		
+		//search for another stock (i.e.: Citi)
+		//click to open the search field
+		try {
+			driver.findElement(By.className("header-search-wrapper-toggle")).click();
+			System.out.println("clicked to open search");
+		} catch (Throwable e) {
+			System.out.println("search was not opened");
+			
+		}
+		
+		//Enter the search text for the next stock
+		try {
+			driver.findElement(By.className("ticker-input-input")).sendKeys("CI");
+			System.out.println("Entered search text (First Part");
+			//wait a bit and enter the second part of the search string
+			Thread.sleep(5000);
+			//enter the second part of the search string
+			driver.findElement(By.className("ticker-input-input")).sendKeys("TI");
+		} catch (Throwable e) {
+			System.out.println("Could not enter search text");
+		}
+		
+		//select CITI from list of results
+		try {
+			//Select Apple from the list of results
+			driver.findElement(By.className("ticker-input-results-symbol")).click();
+			System.out.println("Clicked Citi from the list of results");
+		} catch (Throwable e) {
+			System.out.println("Could not click Citi from the list of results");
+		}
+		
+		//get the eps for citi stock and display it via println statement
+		//traverse through the table
+		//find the EPS entry
+		//print the EPS entry
+		//get the EPS entry and make it a int ("int citiEPS")
+		
+		
+		//compare eps for citi stock to apple stock and display which is higher via println statement
+		//set an int value for the result ("int compResult")
+		//then do the comparison and print out the value
+		//int compResult
+		// if (aaplEPS > citiEPS) {
+				//compResult = aaplEPS;
+			//}
+			//else
+			//{
+			// compResult = citiEPS;
+			//then print out the results
+			//System.out.println("Largest of the two is " + compResult);
+			//}
 	}
 	
 	public void tearDown() throws Throwable {
 		driver.closeApp();//closes simulator
 		System.out.println("Done for now");
 	}
-	
 }

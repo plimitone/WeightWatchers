@@ -24,9 +24,11 @@ public class WWObjectMap {
 	//public static String EmailDirectory = "/Users/flimitone/Documents/workspace-bad/Resources/Email.properties";
 	
 	
-	//Home Screen
+	//Fool Home Screen
 	//public static final By HomeSymptomCheckerButton = By.name("UIA_tools_symptomchecker");//By.xpath("//UIAApplication[1]/UIAWindow[1]/UIACollectionView[1]/UIACollectionCell[1]/UIAStaticText[1]");
-	public static final By frontSearch = By.name("query");
+	//public static final By frontSearch = By.name("query");
 	
-
+	//NYSE Home Screen
+	//mobile nav on top right...this opens the menu (hamburger)
+	//public static final By NavTopRight = By.
 }
