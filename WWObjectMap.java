@@ -1,4 +1,4 @@
-package com.weightwatchers.test;
+//package com.weightwatchers.test;
 
 import org.openqa.selenium.*;
 
