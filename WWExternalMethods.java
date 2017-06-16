@@ -69,30 +69,6 @@ public class WWExternalMethods {
 		//p = Runtime.getRuntime().exec("/usr/bin/open -a Terminal " + WWExternalMethods.DataFileDirectory + "killAppium.sh");
 		p = Runtime.getRuntime().exec("usr/bin/open -a Terminal " + "killAppium.sh");
 	}
-	
-	public static void changeEnvPROD(AppiumDriver driver) {
-		//tap more on home screen
-		driver.findElement(By.name("More")).click();
-		//tap environment switcher at settings
-		//driver.findElement(By.name("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAStaticText[1]")).click();
-		driver.findElement(By.name("Environment Switcher")).click();
-		//tap prod at env switcher
-		driver.findElement(By.name("PROD")).click();
-		//tap tools to go back home from env switcher
-		driver.findElement(By.name("Tools")).click();
-}
-
-	public static void changeEnvPERF(AppiumDriver driver) {
-		//tap more on home screen
-		driver.findElement(By.name("More")).click();
-		//tap environment switcher at settings
-		//driver.findElement(By.name("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[1]/UIAStaticText[1]")).click();
-		driver.findElement(By.name("Environment Switcher")).click();
-		//tap prod at env switcher
-		driver.findElement(By.name("PERF")).click();
-		//tap tools to go back home from env switcher
-		driver.findElement(By.name("Tools")).click();
-	}
 }
 
 	
