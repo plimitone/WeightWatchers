@@ -1,4 +1,4 @@
-package com.weightwatchers.test;
+//package com.weightwatchers.test;
 
 import java.util.Date;
 import java.util.Properties;
