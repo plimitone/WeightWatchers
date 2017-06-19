@@ -5,9 +5,12 @@ Reverse String Exercise
 - ```ReverseTheString.java```
 
 *Mobile Exercise*
+- Fool.com web page is used here
+
 - ```PriceTestCompare.java```
   
   *This is for exercise three. As I had issues with my environment, what could not be completed is pseucode that walks through what ideally would be done*
+  *Any work that could not be completed is commented out with multiline comments and pseudocode is included to walk through the logic.*
   
 - ```WWObjectMap.java```
   
