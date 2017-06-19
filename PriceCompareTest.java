@@ -177,25 +177,32 @@ public class PriceCompareTest {
 		
 		
 		//Print the 52wk high for the stock
-		//traverse through the table
-		//find the 52 week range entry
-		//then print the 52 week entry
+		/**
+		  * traverse through the table
+		  * find the 52 week range entry
+		  * then print the 52 week entry
+		 */
 		
-		//Compare current price to high-low in range and display it via println statement
-		//get the current price and make it a int ("int aaplCurrPrice")
-		//Note there is no low price
+		/**
+		  * Compare current price to high-low in range and display it via println statement
+		  * get the current price and make it a int ("int aaplCurrPrice")
+		  * Note there is no low price
+		  */
 		
 		
 		//get the EPS for apple stock and save it
-		//traverse through the table
-		//find the EPS entry
-		//print the EPS entry
-		//get the EPS entry and make it a int ("int aaplEPS")
+		/**
+		  * traverse through the table
+		  * find the EPS entry
+		  * print the EPS entry
+		  * get the EPS entry and make it a int ("int aaplEPS")
+		  */
+		
 		
 		//search for another stock (i.e.: Citi)
 		//click to open the search field
-		try {
-			driver.findElement(By.className("header-search-wrapper-toggle")).click();
+		  try {
+		  	driver.findElement(By.className("header-search-wrapper-toggle")).click();
 			System.out.println("clicked to open search");
 		} catch (Throwable e) {
 			System.out.println("search was not opened");
@@ -224,25 +231,28 @@ public class PriceCompareTest {
 		}
 		
 		//get the eps for citi stock and display it via println statement
-		//traverse through the table
-		//find the EPS entry
-		//print the EPS entry
-		//get the EPS entry and make it a int ("int citiEPS")
-		
+		/**
+		  * traverse through the table
+		  * find the EPS entry
+		  * print the EPS entry
+		  * get the EPS entry and make it a int ("int citiEPS")
+		  */
 		
 		//compare eps for citi stock to apple stock and display which is higher via println statement
-		//set an int value for the result ("int compResult")
-		//then do the comparison and print out the value
-		//int compResult
-		// if (aaplEPS > citiEPS) {
-				//compResult = aaplEPS;
-			//}
-			//else
-			//{
-			// compResult = citiEPS;
-			//then print out the results
-			//System.out.println("Largest of the two is " + compResult);
-			//}
+		/**
+		  * set an int value for the result ("int compResult")
+		  * then do the comparison and print out the value
+		  * int compResult
+		  * if (aaplEPS > citiEPS) {
+			* compResult = aaplEPS;
+			*}
+			*else
+			*{
+			* compResult = citiEPS;
+			* then print out the results
+			* System.out.println("Largest of the two is " + compResult);
+			*}
+		*/
 	}
 	
 	public void tearDown() throws Throwable {
